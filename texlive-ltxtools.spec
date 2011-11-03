@@ -1,3 +1,9 @@
+# revision 24148
+# category Package
+# catalog-ctan /macros/latex/contrib/ltxtools
+# catalog-date 2011-09-29 18:14:46 +0200
+# catalog-license lppl1.3
+# catalog-version 0.0.1
 Name:		texlive-ltxtools
 Version:	0.0.1
 Release:	1
@@ -36,6 +42,7 @@ author uses in the coding of others of his macro bundles.
 %files
 %{_texmfdistdir}/tex/latex/ltxtools/ltxtools.sty
 %doc %{_texmfdistdir}/doc/latex/ltxtools/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -46,3 +53,5 @@ author uses in the coding of others of his macro bundles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
