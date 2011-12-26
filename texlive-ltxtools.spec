@@ -1,11 +1,11 @@
-# revision 24148
+# revision 24897
 # category Package
 # catalog-ctan /macros/latex/contrib/ltxtools
-# catalog-date 2011-09-29 18:14:46 +0200
+# catalog-date 2011-12-19 23:56:31 +0100
 # catalog-license lppl1.3
-# catalog-version 0.0.1
+# catalog-version 0.0.1a
 Name:		texlive-ltxtools
-Version:	0.0.1
+Version:	0.0.1a
 Release:	1
 Summary:	A collection of LaTeX API macros
 Group:		Publishing
@@ -17,30 +17,36 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
-This is a preliminary release of a bundle of macros that the
-author uses in the coding of others of his macro bundles.
+This is a bundle of macros that the author uses in the coding
+of others of his macro files.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-base.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-doc.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-environ.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-incluput.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-index.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-review.sty
+%{_texmfdistdir}/tex/latex/ltxtools/ltxtools-trace.sty
 %{_texmfdistdir}/tex/latex/ltxtools/ltxtools.sty
 %doc %{_texmfdistdir}/doc/latex/ltxtools/README
 %doc %{_tlpkgobjdir}/*.tlpobj
