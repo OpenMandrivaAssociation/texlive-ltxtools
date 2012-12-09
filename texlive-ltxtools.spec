@@ -51,3 +51,21 @@ of others of his macro files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1a-2
++ Revision: 753578
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1a-1
++ Revision: 745300
+- texlive-ltxtools
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1-1
++ Revision: 718917
+- texlive-ltxtools
+- texlive-ltxtools
+- texlive-ltxtools
+- texlive-ltxtools
+
