@@ -6,7 +6,7 @@
 # catalog-version 0.0.1a
 Name:		texlive-ltxtools
 Version:	0.0.1a
-Release:	4
+Release:	5
 Summary:	A collection of LaTeX API macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ltxtools
