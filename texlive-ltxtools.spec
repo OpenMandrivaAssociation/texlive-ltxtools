@@ -1,12 +1,12 @@
 # revision 24897
 # category Package
 # catalog-ctan /macros/latex/contrib/ltxtools
-# catalog-date 2011-12-19 23:56:31 +0100
+# catalog-date 2014-02-26 23:03:13 +0100
 # catalog-license lppl1.3
 # catalog-version 0.0.1a
 Name:		texlive-ltxtools
 Version:	0.0.1a
-Release:	7
+Release:	8
 Summary:	A collection of LaTeX API macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ltxtools
@@ -51,21 +51,3 @@ of others of his macro files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1a-2
-+ Revision: 753578
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1a-1
-+ Revision: 745300
-- texlive-ltxtools
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.0.1-1
-+ Revision: 718917
-- texlive-ltxtools
-- texlive-ltxtools
-- texlive-ltxtools
-- texlive-ltxtools
-
