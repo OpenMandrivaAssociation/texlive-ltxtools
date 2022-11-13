@@ -1,18 +1,12 @@
-# revision 24897
-# category Package
-# catalog-ctan /macros/latex/contrib/ltxtools
-# catalog-date 2014-02-26 23:03:13 +0100
-# catalog-license lppl1.3
-# catalog-version 0.0.1a
 Name:		texlive-ltxtools
-Version:	0.0.1a
-Release:	12
+Version:	24897
+Release:	1
 Summary:	A collection of LaTeX API macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ltxtools
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxtools.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxtools.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxtools.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxtools.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ This is a bundle of macros that the author uses in the coding
 of others of his macro files.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,7 +38,7 @@ of others of his macro files.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
