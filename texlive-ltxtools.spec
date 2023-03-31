@@ -1,6 +1,6 @@
 Name:		texlive-ltxtools
 Version:	24897
-Release:	1
+Release:	2
 Summary:	A collection of LaTeX API macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ltxtools
